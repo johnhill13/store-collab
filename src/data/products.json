@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "I am Groot",
+      "description": "This is Groot, from the Groot land.",
+      "keywords": ["wood", "tree", "guardians of the galaxy"],
+      "image": "https://images.unsplash.com/photo-1560343776-97e7d202ff0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
+      "age": ["0", "+"],
+      "price": 19.99
+    },
+    {
+      "id": 2,
+      "name": "Buzz Lightyear",
+      "description": "Buzz Lightyear to the rescue!",
+      "keywords": ["toy", "plastic", "Toy Story"],
+      "image": "https://images.unsplash.com/photo-1570676615824-f2f204d1e4ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80",
+      "age": ["0", "+"],
+      "price": 19.99
+    }
+  ]
+}
