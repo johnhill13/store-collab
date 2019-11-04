@@ -13,7 +13,7 @@ const ProductListItem = props => {
           src={props.product.image}
           height={100}
           title={props.product.name}
-          alt="Image"
+          alt="Toy"
         />
       </div>
       <div className="row">

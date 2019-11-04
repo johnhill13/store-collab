@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Cart from "../features/cart";
 
 const CartPage = props => {
