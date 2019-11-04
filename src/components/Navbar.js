@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
       <div className="container">
@@ -12,11 +13,20 @@ const Navbar = () => {
           Categories
         </Link>
         <Link className="nav-link" to="/cart">
-          Cart
+          Cart ({cart.reduce((acc, item) => {
+            return acc + item.quantity
+          }, 0)})
         </Link>
+        <Link to="/checkout">Checkout</Link>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+function mapStateToProps(state) {
+  return {
+    cart: state.cart,
+  }
+}
+
+export default connect(mapStateToProps)(Navbar);
