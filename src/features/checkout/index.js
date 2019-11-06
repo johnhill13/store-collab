@@ -8,7 +8,7 @@ import fetchApi from "../../modules/fetch-api";
 function submitOrder(values, cart) {
   const { email, name } = values.order;
 
-  fetchApi("post", "https://student-example-api,herokuapp.com/v1/orders.json", {
+  fetchApi("post", "https://store-collab-server.herokuapp.com/api/products", {
     order: {
       name,
       email,
