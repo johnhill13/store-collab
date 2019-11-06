@@ -6,6 +6,7 @@ import { Switch, Route, withRouter } from "react-router-dom";
 import Home from "../components/Home";
 import Categories from "../components/Categories";
 import Cart from "../components/Cart";
+import ProductList from "../components/ProductList";
 
 const Routes = () => {
   return (
@@ -13,6 +14,7 @@ const Routes = () => {
       <Route exact path="/" component={Home} />
       <Route path="/categories" component={Categories} />
       <Route path="/cart" component={Cart} />
+      <Route path="/productlist" component={ProductList} />
     </Switch>
   );
 };

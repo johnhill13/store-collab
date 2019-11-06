@@ -5,6 +5,8 @@ export const storeProducts = [
     img: "",
     price: 1000,
     company: "Apple",
+    category: "computer",
+    keyword: ["computer", "technology", "laptop"],
     info:
         "here is some info about the MacBook Pro",
     inCart: false,
@@ -17,6 +19,8 @@ export const storeProducts = [
     img: "",
     price: 500,
     company: "Apple",
+    category: "computer",
+    keyword: ["computer", "technology", "laptop"],
     info:
         "here is some info about the MacBook",
     inCart: false,
