@@ -1,34 +1,38 @@
 import React, { Component } from "react";
 import { API_URL } from "../constants";
 import Axios from "axios";
-import ProductList from "../components/ProductList";
+// import ProductList from "../components/ProductList";
 import Categories from "../components/Categories";
 
 class apiContainer extends Component {
-  state = {
-    products: []
-  };
+    state = {
+        products: []
+    };
 
-  componentDidMount() {
-    this.getProducts();
-  }
+    componentDidMount() {
+        this.getProducts();
+    }
 
-  getProducts = () => {
-    Axios.get(API_URL).then(response => {
-    console.log(response.data.products)
-      this.setState({
-        products: response.data.products
-      });
-    });
-  };
+    getProducts = () => {
+        Axios.get(API_URL)
+            .then(response => {
+                console.log("This is the response", response.data.products)
+                console.log("This is the state", this.state)
 
-  render() {
-    return (
-      <React.Fragment>
-        <Categories products={this.state.products} />
-      </React.Fragment>
-    );
-  }
+                this.setState({
+                    products: response.data.products
+                });
+            })
+            .catch(err => console.log(err))
+    };
+
+    render() {
+        return (
+            <>
+                <Categories products={this.state.products} />
+            </>
+        );
+    }
 }
 
 export default apiContainer;
