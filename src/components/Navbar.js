@@ -39,7 +39,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/cart">
-                <i class="fas fa-shopping-bag"></i> Cart
+                <i className="fas fa-shopping-bag"></i> Cart
               </Link>
             </li>
           </ul>
