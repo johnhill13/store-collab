@@ -16,8 +16,8 @@ class apiContainer extends Component {
     getProducts = () => {
         Axios.get(API_URL)
             .then(response => {
-                console.log("This is the response", response.data.products)
-                console.log("This is the state", this.state)
+                console.log("This is the response", response)
+
 
                 this.setState({
                     products: response.data.products
@@ -27,6 +27,7 @@ class apiContainer extends Component {
     };
 
     render() {
+        console.log("This is the state", this.state)
         return (
             <>
                 <Categories products={this.state.products} />
