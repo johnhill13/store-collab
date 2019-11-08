@@ -6,7 +6,7 @@ export class ProductDetails extends Component {
       <div>
         <div className="container">
           <div className="row">
-            <div className="col-md-8 text-center mx-auto my-2 align-self-end">
+            <div className="col-md-8 text-center mx-auto my-2">
               {/* <!--Carousel Wrapper--> */}
               <div
                 id="carousel-thumb"
