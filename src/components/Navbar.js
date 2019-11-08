@@ -42,6 +42,11 @@ const Navbar = () => {
                 <i className="fas fa-shopping-bag"></i> Cart
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/apicontainer">
+                API
+              </Link>
+            </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">
             <input
