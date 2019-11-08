@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import Title from "./Title";
 // import ProductList from "./ProductList";
 
-const Categories = ({ products }) => {
+const Categories = ({ products, categories }) => {
     // console.log("This is the categories page", products)
     // console.log(products)
-    const listCategory = products.map(category => (
+    const listCategory = categories.map(category => (
         <div className="col-lg-3 col-md-4 col-sm-6 my-2 text-center">
             <div className="card bg-dark text-black">
                 <img
