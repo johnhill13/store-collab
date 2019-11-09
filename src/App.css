@@ -1,32 +1,42 @@
 .masthead {
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 35rem;
-  padding: 15rem 0;
-  background: linear-gradient(
-      to bottom,
-      rgba(22, 22, 22, 0.3) 0,
-      rgba(22, 22, 22, 0.7) 75%,
-      #161616 100%
-    ),
-    url(./components/images/img1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: linear-gradient(
+            to bottom,
+            rgba(22, 22, 22, 0.3) 0,
+            rgba(22, 22, 22, 0.7) 75%,
+            #161616 100%
+        ),
+        url(./components/images/img1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
 }
 
 .get-started-btn {
-  background-color: #64a19d;
-  border: none;
-  letter-spacing: 0.15rem;
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
-  font-family: "Varela Round";
-  font-size: 80%;
-  text-transform: uppercase;
+    background-color: #64a19d;
+    border: none;
+    letter-spacing: 0.15rem;
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 1.25rem 2rem;
+    font-family: 'Varela Round';
+    font-size: 80%;
+    text-transform: uppercase;
 }
 .get-started-btn:hover {
-  background-color: #476e6c;
+    background-color: #476e6c;
+}
+
+.product-image {
+    height: 300px;
+    width: 300px;
+}
+
+.category-image {
+    height: 150px;
+    width: 245px;
 }

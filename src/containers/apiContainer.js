@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { API_URL } from "../constants";
 import Axios from "axios";
-// import ProductList from "../components/ProductList";
 import Categories from "../components/Categories";
 
 class apiContainer extends Component {
