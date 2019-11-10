@@ -11,7 +11,7 @@ const Categories = ({ products, categories }) => {
                 <img
                     className="card-img category-image"
                     src={category.image}
-                    alt="Pear"
+                    alt={category.name}
                 />
                 <div className="card-body bg-dark text-white">
                     <h5 className="card-title">{category.name}</h5>
