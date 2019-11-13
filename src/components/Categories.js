@@ -31,9 +31,7 @@ const Categories = ({ products, categories }) => {
                 </Link>
             </div>
             {/* <ProductList products={products} /> */}
-            <Switch>
-                <Route path="/categories/productlist" render={(props) => <ProductList products={products} />} />
-            </Switch>
+
         </>
     );
 };

@@ -8,7 +8,6 @@ import Cart from "../components/Cart";
 
 import ProductDetails from "../components/ProductDetails";
 import apiContainer from "../containers/apiContainer";
-import ProductList from "../components/ProductList";
 
 const Routes = () => {
     return (
@@ -16,7 +15,6 @@ const Routes = () => {
             <Route exact path="/" component={Home} />
             <Route path="/categories" component={apiContainer} />
             <Route path="/cart" component={Cart} />
-            <Route path="/categories/productlist" component={ProductList} />
             <Route path="/productdetails" component={ProductDetails} />
         </Switch>
     );
