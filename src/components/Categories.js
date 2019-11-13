@@ -2,10 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Title from "./Title";
 
-const Categories = ({ products, categories, onClickCategory, selectedCategory }) => {
-    console.log(selectedCategory)
+const Categories = ({ categories, onClickCategory }) => {
     const listCategory = categories.map(category => (
-        < div className="col-lg-3 col-md-4 col-sm-6 my-2 text-center" key={category.id} onClick={onClickCategory} >
+        < div className="col-lg-3 col-md-4 col-sm-6 my-2 text-center" key={category.name} onClick={onClickCategory} >
             <div className="card bg-dark text-black">
                 <img
                     className="card-img category-image"
