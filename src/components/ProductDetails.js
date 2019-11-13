@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Carousel from 'react-bootstrap/Carousel';
 
 export class ProductDetails extends Component {
   render() {
@@ -6,96 +7,42 @@ export class ProductDetails extends Component {
       <div>
         <div className="container">
           <div className="row">
+            <div className="col-md-8">
+              <p className="font-weight-bold mx-auto my-2">This could be the Item Title</p>
+            </div>
+          </div>
+          <div className="row">
             <div className="col-md-8 text-center mx-auto my-2">
-              {/* <!--Carousel Wrapper--> */}
-              <div
-                id="carousel-thumb"
-                className="carousel slide carousel-fade carousel-thumbnails"
-                data-ride="carousel"
-              >
-                {/* <!--Slides--> */}
-                <div className="carousel-inner" role="listbox">
-                  <div className="carousel-item active">
-                    <img
-                      className="d-block w-100"
-                      src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).jpg"
-                      alt="First slide"
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      className="d-block w-100"
-                      src="https://mdbootstrap.com/img/Photos/Slides/img%20(121).jpg"
-                      alt="Second slide"
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      className="d-block w-100"
-                      src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg"
-                      alt="Third slide"
-                    />
-                  </div>
-                </div>
-                {/* <!--/.Slides--> */}
-                {/* <!--Controls--> */}
-                <a
-                  className="carousel-control-prev"
-                  href="#carousel-thumb"
-                  role="button"
-                  data-slide="prev"
-                >
-                  <span
-                    className="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="sr-only">Previous</span>
-                </a>
-                <a
-                  className="carousel-control-next"
-                  href="#carousel-thumb"
-                  role="button"
-                  data-slide="next"
-                >
-                  <span
-                    className="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="sr-only">Next</span>
-                </a>
-                {/* <!--/.Controls--> */}
-                {/* <ol className="carousel-indicators">
-                  <li
-                    data-target="#carousel-thumb"
-                    data-slide-to="0"
-                    className="active"
-                  >
-                    <img
-                      src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg"
-                      width="100"
-                    />
-                  </li>
-                  <li data-target="#carousel-thumb" data-slide-to="1">
-                    <img
-                      src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg"
-                      width="100"
-                    />
-                  </li>
-                  <li data-target="#carousel-thumb" data-slide-to="2">
-                    <img
-                      src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg"
-                      width="100"
-                    />
-                  </li>
-                </ol> */}
-              </div>
-              {/* <!--/.Carousel Wrapper--> */}
+              <Carousel>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1573331097320-d6c1d8c3e0f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
+                    alt="unsplash temp"
+                  />
+                  <Carousel.Caption></Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1572876828821-2358b3e65be3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
+                    alt="unsplash temp"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1573091474649-91ffc430c03d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
+                    alt="unsplash temp"
+                  />
+
+                  <Carousel.Caption></Carousel.Caption>
+                </Carousel.Item>
+              </Carousel>
             </div>
             <div className="col-md-4 text-center align-self-center mx-auto my-2">
               <div className="jumbotron mb-0">
                 <p className="font-weight-normal">This is price. 10.99</p>
-                {/* not sure if we want quantity here or not */}
-                <p className="font-weight-normal">QTY:</p>
                 <button type="button" className="btn btn-primary">
                   Add to Cart
                 </button>
@@ -103,14 +50,15 @@ export class ProductDetails extends Component {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-8">
-            <div className="col-md-8 my-2 mx-auto text-align-center">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 offset-md-0">
               <p className="font-weight-bold">This could be the Title</p>
               <p className="font-weight-normal">
-                 Probably the product description down here. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                quibusdam consequuntur pariatur dolore minus, veniam quis quam,
-                cumque excepturi laborum nisi! Iusto ex magni molestias delectus
+                Probably the product description down here. Lorem, ipsum dolor
+                sit amet consectetur adipisicing elit. Dicta quibusdam
+                consequuntur pariatur dolore minus, veniam quis quam, cumque
+                excepturi laborum nisi! Iusto ex magni molestias delectus
                 impedit, dicta dolorum deserunt.
               </p>
             </div>
