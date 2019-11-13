@@ -7,62 +7,65 @@ import ProductList from '../components/ProductList';
 
 
 class apiContainer extends Component {
-  state = {
-    products: [],
-    categories: []
-  };
+    state = {
+        products: [],
+        categories: [],
+        selectedcategory: '',
+    };
 
-  componentDidMount() {
-    this.getProducts();
-    this.getCategories();
-  }
+    componentDidMount() {
+        this.getProducts();
+        this.getCategories();
+    }
 
-  getProducts = () => {
-    Axios.get(`${API_URL}/products`)
-      .then(response => {
-        console.log("This is the products response", response);
-        this.setState({
-          products: response.data.products
-        });
-      })
-      .catch(err => console.log(err));
-  };
-  getCategories = () => {
-    Axios.get(`${API_URL}/categories`)
-      .then(response => {
-        console.log("This is the categories response", response);
-        this.setState({
-          categories: response.data.categories
-        });
-      })
-      .catch(err => console.log(err));
-  };
+    getProducts = () => {
+        Axios.get(`${API_URL}/products`)
+            .then(response => {
+                this.setState({
+                    products: response.data.products
+                });
+            })
+            .catch(err => console.log(err));
+    };
+    getCategories = () => {
+        Axios.get(`${API_URL}/categories`)
+            .then(response => {
+                this.setState({
+                    categories: response.data.categories
+                });
+            })
+            .catch(err => console.log(err));
+    };
+    onClickCategory = (event) => {
+        this.setState({ selectedcategory: event.target.name });
+    }
 
-  render() {
-    console.log("This is the products state", this.state.products);
-    console.log("This is the categories state", this.state.categories);
-    return (
-      <>
-        <Switch>
-          <Route
-            exact
-            path="/categories/productlist"
-            render={props => <ProductList products={this.state.products} />}
-          />
-          <Route
-            exact
-            path="/categories"
-            render={props => (
-              <Categories
-                categories={this.state.categories}
-                products={this.state.products}
-              />
-            )}
-          />
-        </Switch>
-      </>
-    );
-  }
+    render() {
+        console.log(this.state)
+        return (
+            <>
+                <Switch>
+                    <Route
+                        exact
+                        path="/categories/productlist"
+                        render={props => <ProductList products={this.state.products} selectedCategory={this.state.selectedcategory} />}
+                    />
+                    <Route
+                        exact
+                        path="/categories"
+                        render={props => (
+                            <Categories
+                                categories={this.state.categories}
+                                products={this.state.products}
+                                onClickCategory={this.onClickCategory}
+                                selectedCategory={this.state.selectedcategory}
+                            />
+                        )}
+                    />
+                </Switch>
+            </>
+        );
+    }
 }
 
 export default apiContainer;
