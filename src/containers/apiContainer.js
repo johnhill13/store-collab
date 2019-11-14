@@ -4,6 +4,7 @@ import { API_URL } from "../constants";
 import Axios from "axios";
 import Categories from "../components/Categories";
 import ProductList from '../components/ProductList';
+import ProductDetails from '../components/ProductDetails';
 
 
 class apiContainer extends Component {
@@ -11,11 +12,14 @@ class apiContainer extends Component {
         products: [],
         categories: [],
         selectedcategory: '',
+        selectedProductName: '',
+        selectedProductObject: {},
     };
 
     componentDidMount() {
         this.getProducts();
         this.getCategories();
+
     }
 
     getProducts = () => {
@@ -36,18 +40,38 @@ class apiContainer extends Component {
             })
             .catch(err => console.log(err));
     };
+
     onClickCategory = (event) => {
         this.setState({ selectedcategory: event.target.name });
-    }
+    };
+
+    onClickProduct = async(event) => {
+        let clickedProductName = event.target.name;
+        this.setState({ selectedProductName: clickedProductName });
+        this.setProductObj();
+    };
+
+    setProductObj = () => {
+        this.state.products.forEach(product => {
+            // console.log(product.name)
+            // console.log("selected" + this.state.selectedProductName)
+            if (product.name === this.state.selectedProductName) {
+                this.setState({ selectedProductObject: product })
+            };
+        });
+    };
+
+
 
     render() {
+        // console.log(this.state)
         return (
             <>
                 <Switch>
                     <Route
                         exact
                         path="/categories/productlist"
-                        render={props => <ProductList products={this.state.products} selectedCategory={this.state.selectedcategory} />}
+                        render={props => <ProductList products={this.state.products} selectedCategory={this.state.selectedcategory} onClickProduct={this.onClickProduct} selectedProductObject={this.state.selectedProductObject} />}
                     />
                     <Route
                         exact
@@ -61,6 +85,7 @@ class apiContainer extends Component {
                             />
                         )}
                     />
+                    <Route exact path="/categories/productlist/productdetails" render={(props) => <ProductDetails products={this.state.products} onClickProduct={this.onClickProduct} />} />
                 </Switch>
             </>
         );
