@@ -10,7 +10,7 @@ export default function Product({ image, name, description, price, onClickProduc
                     <img
                     name={name}
                         src={image}
-                        className="rounded product-image"
+                        className="rounded"
                         alt="..."
                     />{" "}
                 </div>
