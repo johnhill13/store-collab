@@ -6,11 +6,12 @@ export default function Product({ image, name, description, price, onClickProduc
     return (
         <div className="container-fluid text-center border mx-auto my-2" onClick={onClickProduct}>
             <div className="row">
-                <div className="col-md-4 my-2 mx-auto">
+                <div className="col-md-4 my-2 align-self-center mx-auto">
                     <img
                     name={name}
+                    style={{height:'auto',width:'100%'}}
                         src={image}
-                        className="rounded product-image"
+                        className="rounded"
                         alt="..."
                     />{" "}
                 </div>
