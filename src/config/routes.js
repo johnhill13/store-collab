@@ -5,8 +5,6 @@ import { Switch, Route, withRouter } from "react-router-dom";
 // SECTION Files
 import Home from "../components/Home";
 import Cart from "../components/Cart";
-
-import ProductDetails from "../components/ProductDetails";
 import apiContainer from "../containers/apiContainer";
 
 const Routes = () => {
@@ -15,7 +13,6 @@ const Routes = () => {
             <Route exact path="/" component={Home} />
             <Route path="/categories" component={apiContainer} />
             <Route path="/cart" component={Cart} />
-            <Route path="/productdetails" component={ProductDetails} />
         </Switch>
     );
 };

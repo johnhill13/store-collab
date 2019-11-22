@@ -12,7 +12,7 @@ class apiContainer extends Component {
         products: [],
         categories: [],
         selectedcategory: '',
-        selectedProductName: '',
+        selectedProductId: '',
         selectedProductObject: {},
     };
 
@@ -45,26 +45,23 @@ class apiContainer extends Component {
         this.setState({ selectedcategory: event.target.name });
     };
 
-    onClickProduct = async(event) => {
-        let clickedProductName = event.target.name;
-        this.setState({ selectedProductName: clickedProductName });
-        this.setProductObj();
+    onClickProduct = (event) => {
+        let clickedProductId = event.target.id;
+        this.setState({ selectedProductId: clickedProductId });
+        // this.setProductObj();
     };
 
-    setProductObj = () => {
-        this.state.products.forEach(product => {
-            // console.log(product.name)
-            // console.log("selected" + this.state.selectedProductName)
-            if (product.name === this.state.selectedProductName) {
-                this.setState({ selectedProductObject: product })
-            };
-        });
-    };
+    // setProductObj = () => {
+    //     this.state.products.forEach(product => {
+    //         if (product.name === this.state.selectedProductName) {
+    //             this.setState({ selectedProductObject: product })
+    //         };
+    //     });
+    // };
 
 
 
     render() {
-        // console.log(this.state)
         return (
             <>
                 <Switch>
@@ -85,7 +82,7 @@ class apiContainer extends Component {
                             />
                         )}
                     />
-                    <Route exact path="/categories/productlist/productdetails" render={(props) => <ProductDetails products={this.state.products} onClickProduct={this.onClickProduct} />} />
+                    <Route exact path="/categories/productlist/productdetails" render={(props) => <ProductDetails products={this.state.products} selectedProductId={this.state.selectedProductId} />} />
                 </Switch>
             </>
         );
