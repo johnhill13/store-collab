@@ -45,7 +45,7 @@ class apiContainer extends Component {
         this.setState({ selectedcategory: event.target.name });
     };
 
-    onClickProduct = async(event) => {
+    onClickProduct = async (event) => {
         let clickedProductName = event.target.name;
         this.setState({ selectedProductName: clickedProductName });
         this.setProductObj();
@@ -53,8 +53,6 @@ class apiContainer extends Component {
 
     setProductObj = () => {
         this.state.products.forEach(product => {
-            // console.log(product.name)
-            // console.log("selected" + this.state.selectedProductName)
             if (product.name === this.state.selectedProductName) {
                 this.setState({ selectedProductObject: product })
             };
